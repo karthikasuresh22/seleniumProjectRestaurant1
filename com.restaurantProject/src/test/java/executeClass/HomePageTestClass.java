@@ -13,7 +13,7 @@ public class HomePageTestClass extends BaseClass {
 	LoginPage lp;
 	HomePage hp;
 	
-  @Test(priority=1)
+  @Test(priority=1,groups = {"group-1"})
   public void verifyTheProductTabIsDisplyedOrNot() throws IOException {
 	  
 	  lp=new LoginPage(driver);
@@ -28,7 +28,7 @@ public class HomePageTestClass extends BaseClass {
 	  	  
   }
   
-  @Test(priority=2)
+  @Test(priority=2,groups = {"group-1"})
   public void verifyTheD4StoreIsDisplyedOrNot() throws IOException {
 	  
 	  lp=new LoginPage(driver);
@@ -43,7 +43,7 @@ public class HomePageTestClass extends BaseClass {
 	  	  
   }
   
-  @Test(priority=3)
+  @Test(priority=3,groups = {"functional"})
   public void verifyTheLogOutButtonIsWorkingFineOrNot() throws IOException {
 	  
 	  lp=new LoginPage(driver);

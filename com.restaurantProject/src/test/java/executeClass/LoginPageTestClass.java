@@ -12,8 +12,8 @@ public class LoginPageTestClass extends BaseClass {
 	
 	LoginPage lp;
 	
-  @Test(priority=4)
-  public void verifyTheLoginPageIsLoadedWhileHittingTheUrl() {
+  @Test(priority=1,groups = {"group-1"})
+  public void verifyTheLoginPageIsLoadedWhileHittingTheUrl() throws InterruptedException {
 	  
 	  lp=new LoginPage(driver);
 	  
@@ -21,7 +21,7 @@ public class LoginPageTestClass extends BaseClass {
 	  Assert.assertTrue(actual);
 	  
   }
-  @Test(priority=3)
+  @Test(priority=2,groups= {"group-1"})
   public void verifyTheLogoIsDisplayedOrNot() {
 	  
 	  lp=new LoginPage(driver);
@@ -31,7 +31,7 @@ public class LoginPageTestClass extends BaseClass {
 	  	  
   }
   
-  @Test(priority=1,dataProvider="successfullLogin",dataProviderClass=DataProviderClass.class)
+  @Test(priority=3,dataProvider="successfullLogin",dataProviderClass=DataProviderClass.class,groups = {"login-1"})
   public void verifyTheSuccessfullLogin(String uName,String passwrd) {
 	  
 	  lp=new LoginPage(driver);
@@ -45,8 +45,8 @@ public class LoginPageTestClass extends BaseClass {
 	  Assert.assertEquals(actual, expected);
 	 
   }
-  @Test(priority=2,dataProvider="unsuccessfullLogin",dataProviderClass=DataProviderClass.class)
-  public void verifyUnSuccessfullLogin(String uName,String passwrd) {
+  @Test(priority=4,dataProvider="unsuccessfullLogin",dataProviderClass=DataProviderClass.class,groups = {"login-2"})
+  public void verifyUnSuccessfullLogin(String uName,String passwrd) throws InterruptedException {
 	  
 	  lp=new LoginPage(driver);
 
@@ -59,6 +59,8 @@ public class LoginPageTestClass extends BaseClass {
 
 	  // Boolean actual=lp.isLogoisplayedOrNot();
 	  //Assert.assertTrue(actual);
+	  
+	  
 	 	  	  
   }
     

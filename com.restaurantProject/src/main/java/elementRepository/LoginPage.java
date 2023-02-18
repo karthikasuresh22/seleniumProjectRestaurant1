@@ -44,8 +44,9 @@ public class LoginPage {
 	
 	
 	
-	public Boolean isLoginTextIsDisplayed() {
-		exp.presenceOfElementLocatedWaitByXpath(driver,"//h1[text()='Login']");
+	public Boolean isLoginTextIsDisplayed() throws InterruptedException {
+		//exp.presenceOfElementLocatedWaitByXpath(driver,"//h1[text()='Login']");
+		gu.addThreadSleep();
 		return gu.isDisplayedMethod(loginText);
 	}
 	
