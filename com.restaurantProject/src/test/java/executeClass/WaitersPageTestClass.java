@@ -24,9 +24,7 @@ public class WaitersPageTestClass extends BaseClass {
 	  hp=new HomePage(driver);
 	  wp=new WaitersPage(driver);
 	  
-	  lp.enterUserName(lp.readUserName(0, 1));
-	  lp.enterPssword(lp.readPassword(1, 1));
-	  lp.clickLoginButton();
+	  lp.login();
 	  wp.clickToPeopleTab();
 	  wp.clickToWaiterTab();
 	   
@@ -41,9 +39,7 @@ public class WaitersPageTestClass extends BaseClass {
 	  hp=new HomePage(driver);
 	  wp=new WaitersPage(driver);
 	  
-	  lp.enterUserName(lp.readUserName(0, 1));
-	  lp.enterPssword(lp.readPassword(1, 1));
-	  lp.clickLoginButton();
+	  lp.login();
 	  wp.clickToPeopleTab();
 	  wp.clickToWaiterTab();
 	  
@@ -59,15 +55,9 @@ public class WaitersPageTestClass extends BaseClass {
 	  hp=new HomePage(driver);
 	  wp=new WaitersPage(driver);
 	  
-	  lp.enterUserName(lp.readUserName(0, 1));
-	  lp.enterPssword(lp.readPassword(1, 1));
-	  lp.clickLoginButton();
+	  lp.login();
 	  wp.clickToPeopleTab();
-	  wp.clickToWaiterTab();
-	  wp.clickToAddWaiterBtn();
-	  wp.typeWaiterName("Arun");
-	  wp.typePhoneNumber("9446934232");
-	  wp.clickToSubmitBtn();
+	  wp.addWaiter("Arun", "9446934232");	
 	  wp.refreshPage();
 	  wp.typeToSearchField("Arun");
 	  
@@ -83,11 +73,9 @@ public class WaitersPageTestClass extends BaseClass {
 	  hp=new HomePage(driver);
 	  wp=new WaitersPage(driver);
 	  
-	  lp.enterUserName(lp.readUserName(0, 1));
-	  lp.enterPssword(lp.readPassword(1, 1));
-	  lp.clickLoginButton();
+	  lp.login();
 	  wp.clickToPeopleTab();
-	  wp.clickToWaiterTab();
+	  wp.addWaiter("Arun", "9446934232");
 	  wp.typeToSearchField("Arun");
 	  
 	  String expected="Arun";
@@ -102,11 +90,9 @@ public class WaitersPageTestClass extends BaseClass {
 	  hp=new HomePage(driver);
 	  wp=new WaitersPage(driver);
 	  
-	  lp.enterUserName(lp.readUserName(0, 1));
-	  lp.enterPssword(lp.readPassword(1, 1));
-	  lp.clickLoginButton();
+	  lp.login();
 	  wp.clickToPeopleTab();
-	  wp.clickToWaiterTab();
+	  wp.addWaiter("Arun", "9446934232");
 	  wp.typeToSearchField("9446934232");
 	  
 	  String expected="9446934232";

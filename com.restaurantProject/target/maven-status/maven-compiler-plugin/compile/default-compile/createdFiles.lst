@@ -1,0 +1,13 @@
+elementRepository\LoginPage.class
+elementRepository\SalesPage.class
+utilities\ScreenShotClass.class
+elementRepository\HomePage.class
+elementRepository\CustomersPage.class
+elementRepository\ExpensePage.class
+elementRepository\WaitersPage.class
+elementRepository\StorePage.class
+elementRepository\ProductPage.class
+utilities\ExplicitWaitClass.class
+utilities\ExcelReadClass.class
+utilities\GeneralUtilities.class
+utilities\FluentWaitClass.class

@@ -23,9 +23,7 @@ public class ExpensePageTestClass extends BaseClass {
 	  hp=new HomePage(driver);
 	  ep=new ExpensePage(driver);
 	  
-	  lp.enterUserName(lp.readUserName(0, 1));
-	  lp.enterPssword(lp.readPassword(1, 1));
-	  lp.clickLoginButton();
+	  lp.login();
 	  ep.clickToExenseTab();
 	  
 	  String expected="Expence";
@@ -39,9 +37,7 @@ public class ExpensePageTestClass extends BaseClass {
 	  hp=new HomePage(driver);
 	  ep=new ExpensePage(driver);
 	  	 
-	  lp.enterUserName(lp.readUserName(0, 1));
-	  lp.enterPssword(lp.readPassword(1, 1));
-	  lp.clickLoginButton();
+	  lp.login();
 	  ep.clickToExenseTab();
 	  
 	  Boolean actual=ep.isAddExpenseTabDisplayed();

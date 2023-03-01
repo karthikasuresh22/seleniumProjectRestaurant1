@@ -94,5 +94,15 @@ public class StorePage {
 	public Boolean isaddStorEButtonDisplayed() {
 		return gu.isDisplayedMethod(addStoreTab);
 	}
+	public void addStore(String storeName,String storeNum,String country) {
+		clickToStoreTab();
+		clickToAddStoreTab();
+		enterStoreNameToTheStoreNameField(storeName);
+		enterStorePhoneNumber(storeNum);
+		enterCountry(country);
+		clickToSubmitButton();
+	
+		
+	}
 
 }

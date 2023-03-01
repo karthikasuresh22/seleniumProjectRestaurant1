@@ -2,6 +2,7 @@ package executeClass;
 
 import java.io.IOException;
 
+import org.testng.Assert;
 import org.testng.annotations.Test;
 
 import elementRepository.HomePage;
@@ -19,16 +20,14 @@ public class SalesPageTestClass extends BaseClass {
   @Test
   public void verifyTheSalesPageIsVisibleByClickingOnSalesTab() throws IOException {
 	  
-	  
 	  lp=new LoginPage(driver);
 	  hp=new HomePage(driver);
 	  spc=new SalesPage(driver);
-	 
-	  lp.enterUserName(lp.readUserName(0, 1));
-	  lp.enterPssword(lp.readPassword(1, 1));
-	  lp.clickLoginButton();
+	  lp.login();
 	  spc.clickToSalesTab();
-	  spc.isSalesTextDisplayed();
+
+	  Boolean actual= spc.isSalesTextDisplayed();
+	  Assert.assertTrue(actual);
 	  
   }
 }

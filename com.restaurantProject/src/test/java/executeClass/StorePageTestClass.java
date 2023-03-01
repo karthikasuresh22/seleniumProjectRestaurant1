@@ -22,12 +22,8 @@ public class StorePageTestClass extends BaseClass {
 	  lp=new LoginPage(driver);
 	  hp=new HomePage(driver);
 	  sp=new StorePage(driver);
-	 
-
-	  lp.enterUserName(lp.readUserName(0, 1));
-	  lp.enterPssword(lp.readPassword(1, 1));
-	  lp.clickLoginButton();
-	  
+	  lp.login();
+	 	  
 	  sp.clickToStoreTab();
 	  Boolean actual=sp.isStoreNameDisplayed();
 	  Assert.assertTrue(actual);	  
@@ -40,17 +36,10 @@ public class StorePageTestClass extends BaseClass {
 	  hp=new HomePage(driver);
 	  sp=new StorePage(driver);
 	
-	  lp.enterUserName(lp.readUserName(0, 1));
-	  lp.enterPssword(lp.readPassword(1, 1));
-	  lp.clickLoginButton();
-	  sp.clickToStoreTab();
-	  sp.clickToAddStoreTab();
-	  sp.enterStoreNameToTheStoreNameField(sp.readStoreName(7, 1));
-	  sp.enterStoreNameToTheStoreNameField(sp.readStorePhoneNumber(8, 1));
-	  sp.enterCountry(sp.readCountryName(9, 1));
-	  sp.clickToSubmitButton();
+	  lp.login();
+	  sp.addStore("Orange Store2147483647","9495866070" ,"india");
 	  sp.refreshPage();
-	  sp.enterProductNameToSearchField(sp.readStoreName(7, 1));
+	  sp.enterProductNameToSearchField("Orange Store2147483647");
  
 	  String expected="Orange Store2147483647";
 	  String actual=sp.getTextOfStoreName();
@@ -63,11 +52,9 @@ public class StorePageTestClass extends BaseClass {
 	  hp=new HomePage(driver);
 	  sp=new StorePage(driver);
 	
-	  lp.enterUserName(lp.readUserName(0, 1));
-	  lp.enterPssword(lp.readPassword(1, 1));
-	  lp.clickLoginButton();
-	  sp.clickToStoreTab();
-	  sp.enterProductNameToSearchField(sp.readStoreName(7, 1));
+	  lp.login();
+	  sp.addStore("Orange Store2147483647","94958660" ,"india");
+	  sp.enterProductNameToSearchField("Orange Store2147483647");
 	  
 	  String expected="Orange Store2147483647";
 	  String actual=sp.getTextOfStoreName();
@@ -80,10 +67,7 @@ public class StorePageTestClass extends BaseClass {
 	  lp=new LoginPage(driver);
 	  hp=new HomePage(driver);
 	  sp=new StorePage(driver);
-	
-	  lp.enterUserName(lp.readUserName(0, 1));
-	  lp.enterPssword(lp.readPassword(1, 1));
-	  lp.clickLoginButton();
+	  lp.login();
 	  sp.clickToStoreTab();
 	  
 	  Boolean actual=sp.isaddStorEButtonDisplayed();

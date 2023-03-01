@@ -92,5 +92,13 @@ public class WaitersPage {
 	public String getWaiterNumberAfterSearch() {
 		return gu.getTextOfAnElement(waiterNumberSearch);
 	}
+	public void addWaiter(String name,String no) {
+		clickToWaiterTab();
+		clickToAddWaiterBtn();
+		typeWaiterName(name);
+		typePhoneNumber(no);
+		clickToSubmitBtn();
+		
+	}
 
 }

@@ -5,6 +5,7 @@ import utilities.ScreenShotClass;
 
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.BeforeSuite;
+import org.testng.annotations.Optional;
 import org.testng.annotations.Parameters;
 
 import org.testng.annotations.Parameters;
@@ -41,7 +42,7 @@ public class BaseClass {
 	
   @BeforeMethod(groups = {"open"})
   @Parameters({"browser"})
-  public void beforeMethod(String browserValue) throws IOException {
+  public void beforeMethod(@Optional("chrome") String  browserValue) throws IOException {
 	  
 	  readProperty();
 	  

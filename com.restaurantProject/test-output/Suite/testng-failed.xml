@@ -5,16 +5,16 @@
     <listener class-name="extendReport.TestListener"/>
   </listeners>
   <test thread-count="5" parallel="tests" name="ParallellTest(failed)">
-    <parameter name="browser" value="chrome"/>
+    <parameter name="browser" value="edge"/>
     <classes>
-      <class name="executeClass.LoginPageTestClass">
+      <class name="executeClass.ProductPageTestClass">
         <methods>
-          <include name="verifyUnSuccessfullLogin" invocation-numbers="0 1 2"/>
           <include name="afterMethod"/>
+          <include name="VerifySearchFunctionalityByProductCode"/>
           <include name="createReport"/>
           <include name="beforeMethod"/>
         </methods>
-      </class> <!-- executeClass.LoginPageTestClass -->
+      </class> <!-- executeClass.ProductPageTestClass -->
     </classes>
   </test> <!-- ParallellTest(failed) -->
 </suite> <!-- Failed suite [Suite] -->

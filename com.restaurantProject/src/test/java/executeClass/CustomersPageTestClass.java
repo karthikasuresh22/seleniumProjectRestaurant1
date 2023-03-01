@@ -26,9 +26,7 @@ public class CustomersPageTestClass extends BaseClass {
 	  cp=new CustomersPage(driver);
 	  wp=new WaitersPage(driver);
 	  
-	  lp.enterUserName(lp.readUserName(0, 1));
-	  lp.enterPssword(lp.readPassword(1, 1));
-	  lp.clickLoginButton();
+	  lp.login();
 	  wp.clickToPeopleTab();
 	  cp.clickToCustomersTab();
 	  
@@ -45,9 +43,7 @@ public class CustomersPageTestClass extends BaseClass {
 	  cp=new CustomersPage(driver);
 	  wp=new WaitersPage(driver);
 	  
-	  lp.enterUserName(lp.readUserName(0, 1));
-	  lp.enterPssword(lp.readPassword(1, 1));
-	  lp.clickLoginButton();
+	  lp.login();
 	  wp.clickToPeopleTab();
 	  cp.clickToCustomersTab();
 	  
@@ -62,15 +58,9 @@ public class CustomersPageTestClass extends BaseClass {
 	  cp=new CustomersPage(driver);
 	  wp=new WaitersPage(driver);
 	  
-	  lp.enterUserName(lp.readUserName(0, 1));
-	  lp.enterPssword(lp.readPassword(1, 1));
-	  lp.clickLoginButton();
+	  lp.login();
 	  wp.clickToPeopleTab();
-	  cp.clickToCustomersTab();
-	  cp.clickToAddCustomerBtn();
-	  cp.enterCustomerName("satheesh");
-	  cp.enterCustomerNumber("8861231434");
-	  cp.clickToSubmitBtn();
+	  cp.addCustomer("satheesh", "8861231434");
 	  cp.refreshPage();
 	  cp.enterCustomerNameToSearchField("satheesh");
 	   
@@ -88,11 +78,9 @@ public class CustomersPageTestClass extends BaseClass {
 	  cp=new CustomersPage(driver);
 	  wp=new WaitersPage(driver);
 	  
-	  lp.enterUserName(lp.readUserName(0, 1));
-	  lp.enterPssword(lp.readPassword(1, 1));
-	  lp.clickLoginButton();
+	  lp.login();
 	  wp.clickToPeopleTab();
-	  cp.clickToCustomersTab();
+	  cp.addCustomer("satheesh", "8861231434");
 	  cp.enterCustomerNameToSearchField("satheesh");
 	  
 	  String expected="satheesh";
@@ -108,11 +96,9 @@ public class CustomersPageTestClass extends BaseClass {
 	  cp=new CustomersPage(driver);
 	  wp=new WaitersPage(driver);
 	  
-	  lp.enterUserName(lp.readUserName(0, 1));
-	  lp.enterPssword(lp.readPassword(1, 1));
-	  lp.clickLoginButton();
+	  lp.login();
 	  wp.clickToPeopleTab();
-	  cp.clickToCustomersTab();
+	  cp.addCustomer("satheesh", "8861231434");
 	  cp.enterCustomerNameToSearchField("8861231434");
 	  
 	  Boolean actual=cp.isCustomerNumberDisplayed();

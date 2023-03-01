@@ -78,5 +78,12 @@ public class CustomersPage {
 	public Boolean isCustomerNumberDisplayed() {
 		return gu.isDisplayedMethod(customerNumberSearch);
 	}
+	public void addCustomer(String custmrn,String custmno) {
+		clickToCustomersTab();
+		enterCustomerName(custmrn);
+		enterCustomerNumber(custmno);
+		clickToSubmitBtn();
+		
+	}
 
 }
