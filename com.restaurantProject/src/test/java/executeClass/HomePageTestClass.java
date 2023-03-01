@@ -18,10 +18,7 @@ public class HomePageTestClass extends BaseClass {
 	  
 	  lp=new LoginPage(driver);
 	  hp=new HomePage(driver);
-
-	  lp.enterUserName(lp.readUserName(0, 1));
-	  lp.enterPssword(lp.readPassword(1, 1));
-	  lp.clickLoginButton();
+	  lp.login();
 
 	  Boolean actual=hp.isProductTabDisplayed();
 	  Assert.assertTrue(actual);
@@ -33,10 +30,7 @@ public class HomePageTestClass extends BaseClass {
 	  
 	  lp=new LoginPage(driver);
 	  hp=new HomePage(driver);
-
-	  lp.enterUserName(lp.readUserName(0, 1));
-	  lp.enterPssword(lp.readPassword(1, 1));
-	  lp.clickLoginButton();
+	  lp.login();
 
 	  Boolean actual=hp.isd4StoreDisplayed();
 	  Assert.assertTrue(actual);
@@ -48,14 +42,11 @@ public class HomePageTestClass extends BaseClass {
 	  
 	  lp=new LoginPage(driver);
 	  hp=new HomePage(driver);
-
-	  lp.enterUserName(lp.readUserName(0, 1));
-	  lp.enterPssword(lp.readPassword(1, 1));
-	  lp.clickLoginButton();
+	  lp.login();
 	  
 	  hp.clickToLogoutButton();
 	  
-	  String expected="https://qalegend.com/restaurant/login";
+	  String expected="https://qalegend.com/restaurant/logi";
 	  String actual=lp.geturlOfCurrentPage();
 	  Assert.assertEquals(actual, expected);
 	  	  	  
