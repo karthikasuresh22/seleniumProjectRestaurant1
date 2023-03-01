@@ -46,7 +46,7 @@ public class HomePageTestClass extends BaseClass {
 	  
 	  hp.clickToLogoutButton();
 	  
-	  String expected="https://qalegend.com/restaurant/log";
+	  String expected="https://qalegend.com/restaurant/login";
 	  String actual=lp.geturlOfCurrentPage();
 	  Assert.assertEquals(actual, expected);
 	  	  	  
